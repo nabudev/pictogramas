@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emociones</title>
+
+    
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="pictogramas/styles.css">
+</head>
+
+<body>
+    <header class="header-container text-center bg-light">
+        <h1 class="text">¡Aprendiendo Juntos!</h1>
+        <h1>Aprende y juega mientras exploras cuentos y emociones.</h1>
+    </header>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mt-3">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item divider">|</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cuentos.html">Cuentos</a>
+                    </li>
+                    <li class="nav-item divider">|</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="emparejar.html">Emociones</a>
+                    </li>
+                    <li class="nav-item divider">|</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Juego de reglas de convivencia/reglas.html">Reglas de Convivencia</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="card-container">
+        <h2>Las Emociones</h2>
+        <div class="card emotion" role="button" tabindex="0" aria-label="Feliz"
+            onclick="narrate('YO SOY ALEGRÍA. ESTOY ALEGRE CUANDO JUEGO CON MIS AMIGOS ')">
+            <img src="pictogramas\imagenes\alegre (2).png" alt="Feliz">
+            <div class="text-content">
+                <p><strong>YO SOY ALEGRÍA</strong></p>
+                <br>
+                <p>ESTOY ALEGRE CUANDO JUEGO CON MIS AMIGOS </p>
+            </div>
+        </div>
+
+        <div class="card emotion" role="button" tabindex="0" aria-label="Triste"
+            onclick="narrate('YO SOY TRISTEZA. ESTOY TRISTE CUANDO ME LASTIMO')">
+            <img src="pictogramas\imagenes\triste (1).png" alt="Triste">
+            <div class="text-content">
+                <p><strong>YO SOY TRISTEZA</strong></p>
+                <br>
+                <p>ESTOY TRISTE CUANDO ME LASTIMO </p>
+            </div>
+        </div>
+
+        <div class="card emotion" role="button" tabindex="0" aria-label="Enojo"
+            onclick="narrate(' YO SOY ENOJO. Estoy enojado cuando me quitan algo')">
+            <img src="pictogramas\imagenes\enfadar.png" alt="Enojo">
+            <div class="text-content">
+                <p><strong>YO SOY ENOJO</strong></p>
+                <br>
+                <p>ESTOY ENOJADO CUANDO ME QUITAN ALGO</p>
+            </div>
+        </div>
+
+        <div class="card emotion" role="button" tabindex="0" aria-label="Aburrido"
+            onclick="narrate(' YO SOY ABURRIMIENTO. ESTOY ABURRIDO CUANDO NO HAY JUEGOS')">
+            <img src="pictogramas\imagenes\aburrido (1).png" alt="Aburrido">
+            <div class="text-content">
+                <p><strong>YO SOY ABURRIMIENTO</strong></p>
+                <br>
+                <p>ESTOY ABURRIDO CUANDO NO HAY JUEGOS</p>
+            </div>
+        </div>
+
+        <div class="card emotion" role="button" tabindex="0" aria-label="Miedo"
+            onclick="narrate(' YO SOY MIEDO. TENGO MIEDO CUANDO ESTÁ OSCURO')">
+            <img src="pictogramas\imagenes\asustado.png" alt="Miedo">
+            <div class="text-content">
+                <p><strong>YO SOY MIEDO</strong></p>
+                <br>
+                <p>TENGO MIEDO CUANDO ESTÁ OSCURO</p>
+            </div>
+        </div>
+    </div>
+    <section>
+        <h2>EMPAREJA LAS CARAS CON LAS EMOCIONES</h2>
+        <div class="container">
+            <div class="selection-section">
+                <div class="phrases">
+                    <div class="phrase" onclick="selectPhrase(this, 'Enojado')">Enojado</div>
+                    <div class="phrase" onclick="selectPhrase(this, 'Feliz')">Feliz</div>
+                    <div class="phrase" onclick="selectPhrase(this, 'Aburrido')">Aburrido</div>
+                    <div class="phrase" onclick="selectPhrase(this, 'Triste')">Triste</div>
+                </div>
+    
+                <div class="line-separator"></div>
+    
+                <div class="images">
+                    <div class="image-box" onclick="selectImage(this, 'Enojado')"><img src="pictogramas/imagenes/enfadar.png" alt="Imagen 1"></div>
+                    <div class="image-box" onclick="selectImage(this, 'Feliz')"><img src="pictogramas/imagenes/alegre (2).png" alt="Imagen 2"></div>
+                    <div class="image-box" onclick="selectImage(this, 'Aburrido')"><img src="pictogramas/imagenes/aburrido (1).png" alt="Imagen 3"></div>
+                    <div class="image-box" onclick="selectImage(this, 'Triste')"><img src="pictogramas/imagenes/triste (1).png" alt="Imagen 4"></div>
+                </div>
+            </div>
+            
+           
+      </section>
+      
+  <!-- Modal -->
+  <div id="resultModal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p id="modalMessage"></p>
+    </div>
+  </div>
+  
+
+    <footer class="text-center p-3 bg-dark text-light">
+        <p>© 2024 Alumnos de 3° de Desarrollo de Software - ISSC - Todos los derechos reservados</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="pictogramas\CSS\Acciones.js"></script>
+    <script src="pictogramas\script.js"></script>
+</body>
+
+</html>
